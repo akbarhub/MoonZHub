@@ -446,9 +446,7 @@ end)
 
 
 --Restart Button 
-RestarButton.MouseButton1Click:Connect(function()
-  ScreenGui:Destroy()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/akbarhub/MoonZHub/refs/heads/main/EXECUTORSTEST"))();
+RestarButton.MouseButton1Click:Connect(functiofalse ScreenGui:DestroXAlig loadstring(game:HttpGet("https://raw.githubusercontent.com/akbarhub/MoonZHub/refs/heads/main/EXECUTORSTEST1"))();
 end)
 
 --SetingButton
@@ -505,6 +503,38 @@ end)
   
  
  
+ --[[minimizeButton]]--
+local isMinimized = false
+ImageButton.MouseButton1Click:Connect(function()
+isMinimized = not isMinimized
+if isMinimized then
+Frame.Visible = true
+ExecuteButton.Visible = true
+ClearButton.Visible = true
+TextBox.Visible = true
+TextLabel.Visible = true
+BackButton.Visible = false
+TestButton.Visible = false
+SetingButton.Visible = true
+RestarButton.Visible = false
+StatusLabel.Visible = false
+frame.Size = UDim2.new(0, 500, 0, 35)
+minimizeButton.Text = "+"
+else
+Frame.Visible = false
+ExecuteButton.Visible = false
+ClearButton.Visible = false
+TextBox.Visible = false
+TextLabel.Visible = false
+BackButton.Visible = false
+TestButton.Visible = false
+SetingButton.Visible = false
+RestarButton.Visible = false
+StatusLabel.Visible = false
+frame.Size = UDim2.new(0, 500, 0, 350)
+minimizeButton.Text = "-"
+end
+end)  
  --[[minimizeButton]]--
 local isMinimized = false
 ImageButton.MouseButton1Click:Connect(function()
