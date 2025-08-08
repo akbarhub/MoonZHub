@@ -1,0 +1,539 @@
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ScreenGui"
+ScreenGui.Parent = player:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+ScreenGui.ResetOnSpawn = true
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
+ScreenGui.DisplayOrder = 0
+ScreenGui.IgnoreGuiInset = false
+ScreenGui.Enabled = true
+ScreenGui.SelectionGroup = false
+
+local ImageButton = Instance.new("ImageButton")
+ImageButton.Name = "ImageButton"
+ImageButton.Parent = ScreenGui
+ImageButton.Size = UDim2.new(0, 50, 0, 50)
+ImageButton.Position = UDim2.new(0, 30, 0, 0)
+ImageButton.AnchorPoint = Vector2.new(0, 0)
+ImageButton.Visible = true
+ImageButton.BackgroundColor3 = Color3.fromRGB(162, 162, 162)
+ImageButton.BackgroundTransparency = 0
+ImageButton.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ImageButton.BorderSizePixel = 1
+ImageButton.ClipsDescendants = false
+ImageButton.LayoutOrder = 0
+ImageButton.Selectable = true
+ImageButton.SelectionGroup = false
+ImageButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ImageButton.Rotation = 0
+ImageButton.AutomaticSize = Enum.AutomaticSize.None
+ImageButton.Image = "rbxthumb://type=Asset&id=82089671374642&w=420&h=420"
+ImageButton.ImageColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.ImageTransparency = 0
+ImageButton.ScaleType = Enum.ScaleType.Stretch
+ImageButton.SliceScale = 1
+ImageButton.TileSize = UDim2.new(1, 0, 1, 0)
+ImageButton.ImageRectOffset = Vector2.new(0, 0)
+ImageButton.ImageRectSize = Vector2.new(0, 0)
+ImageButton.ResampleMode = Enum.ResamplerMode.Default
+ImageButton.Transparency = 0
+ImageButton.Rotation = 0
+ImageButton.Transparency = 0
+
+local UICorner = Instance.new("UICorner")
+UICorner.Name = "UICorner"
+UICorner.Parent = ImageButton
+
+local UIStroke = Instance.new("UIStroke")
+UIStroke.Name = "UIStroke"
+UIStroke.Parent = ImageButton
+UIStroke.Enabled = true
+UIStroke.Color = Color3.fromRGB(64, 229, 255)
+UIStroke.Thickness = 3
+UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke.Transparency = 0
+UIStroke.LineJoinMode = Enum.LineJoinMode.Round
+UIStroke.Color = Color3.fromRGB(64, 229, 255)
+UIStroke.Transparency = 0
+
+local Frame = Instance.new("Frame")
+Frame.Name = "Frame"
+Frame.Parent = ScreenGui
+Frame.Size = UDim2.new(0, 600, 0, 250)
+Frame.Position = UDim2.new(0, 130, 0, 30)
+Frame.AnchorPoint = Vector2.new(0, 0)
+Frame.Visible = true
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BackgroundTransparency = 0
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 1
+Frame.ClipsDescendants = false
+Frame.LayoutOrder = 0
+Frame.Selectable = false
+Frame.SelectionGroup = false
+Frame.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Frame.Rotation = 0
+Frame.AutomaticSize = Enum.AutomaticSize.None
+Frame.Transparency = 0
+Frame.Rotation = 0
+Frame.Transparency = 0
+
+local TestButton = Instance.new("TextButton")
+TestButton.Name = "TestButton"
+TestButton.Parent = Frame
+TestButton.Size = UDim2.new(0, 200, 0, 50)
+TestButton.Position = UDim2.new(0, 370, 0, 90)
+TestButton.AnchorPoint = Vector2.new(0, 0)
+TestButton.Visible = false
+TestButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TestButton.BackgroundTransparency = 0
+TestButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TestButton.BorderSizePixel = 1
+TestButton.ClipsDescendants = false
+TestButton.LayoutOrder = 0
+TestButton.Selectable = true
+TestButton.SelectionGroup = false
+TestButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+TestButton.Rotation = 0
+TestButton.AutomaticSize = Enum.AutomaticSize.None
+TestButton.Font = Enum.Font.Legacy
+TestButton.Text = "Copy New Update 684"
+TestButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestButton.TextSize = 13
+TestButton.TextScaled = false
+TestButton.TextWrapped = false
+TestButton.TextXAlignment = Enum.TextXAlignment.Center
+TestButton.TextYAlignment = Enum.TextYAlignment.Center
+TestButton.TextTransparency = 0
+TestButton.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+TestButton.TextStrokeTransparency = 1
+TestButton.LineHeight = 1
+TestButton.RichText = false
+TestButton.TextTruncate = Enum.TextTruncate.None
+TestButton.MaxVisibleGraphemes = -1
+TestButton.Transparency = 0
+TestButton.Rotation = 0
+TestButton.Transparency = 0
+
+local StatusLabel = Instance.new("TextLabel")
+StatusLabel.Name = "StatusLabel"
+StatusLabel.Parent = Frame
+StatusLabel.Size = UDim2.new(0, 200, 0, 50)
+StatusLabel.Position = UDim2.new(0, 30, 0, 200)
+StatusLabel.AnchorPoint = Vector2.new(0, 0)
+StatusLabel.Visible = false
+StatusLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+StatusLabel.BackgroundTransparency = 0
+StatusLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StatusLabel.BorderSizePixel = 1
+StatusLabel.ClipsDescendants = false
+StatusLabel.LayoutOrder = 0
+StatusLabel.Selectable = false
+StatusLabel.SelectionGroup = false
+StatusLabel.SizeConstraint = Enum.SizeConstraint.RelativeXY
+StatusLabel.Rotation = 0
+StatusLabel.AutomaticSize = Enum.AutomaticSize.None
+StatusLabel.Font = Enum.Font.Legacy
+StatusLabel.Text = "Status : 🟣 Undetected"
+StatusLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+StatusLabel.TextSize = 15
+StatusLabel.TextScaled = false
+StatusLabel.TextWrapped = false
+StatusLabel.TextXAlignment = Enum.TextXAlignment.Center
+StatusLabel.TextYAlignment = Enum.TextYAlignment.Center
+StatusLabel.TextTransparency = 0
+StatusLabel.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+StatusLabel.TextStrokeTransparency = 1
+StatusLabel.LineHeight = 1
+StatusLabel.RichText = false
+StatusLabel.TextTruncate = Enum.TextTruncate.None
+StatusLabel.MaxVisibleGraphemes = -1
+StatusLabel.Transparency = 0
+StatusLabel.Rotation = 0
+StatusLabel.Transparency = 0
+
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Name = "TextLabel"
+TextLabel.Parent = Frame
+TextLabel.Size = UDim2.new(0, 500, 0, 50)
+TextLabel.Position = UDim2.new(0, 100, 0, 0)
+TextLabel.AnchorPoint = Vector2.new(0, 0)
+TextLabel.Visible = true
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BackgroundTransparency = 0
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 1
+TextLabel.ClipsDescendants = false
+TextLabel.LayoutOrder = 0
+TextLabel.Selectable = false
+TextLabel.SelectionGroup = false
+TextLabel.SizeConstraint = Enum.SizeConstraint.RelativeXY
+TextLabel.Rotation = 0
+TextLabel.AutomaticSize = Enum.AutomaticSize.None
+TextLabel.Font = Enum.Font.Legacy
+TextLabel.Text = "Moonz Executors V2.6"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 18
+TextLabel.TextScaled = false
+TextLabel.TextWrapped = false
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel.TextYAlignment = Enum.TextYAlignment.Center
+TextLabel.TextTransparency = 0
+TextLabel.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextStrokeTransparency = 1
+TextLabel.LineHeight = 1
+TextLabel.RichText = false
+TextLabel.TextTruncate = Enum.TextTruncate.None
+TextLabel.MaxVisibleGraphemes = -1
+TextLabel.Transparency = 0
+TextLabel.Rotation = 0
+TextLabel.Transparency = 0
+
+local ExecuteButton = Instance.new("TextButton")
+ExecuteButton.Name = "ExecuteButton"
+ExecuteButton.Parent = Frame
+ExecuteButton.Size = UDim2.new(0, 200, 0, 50)
+ExecuteButton.Position = UDim2.new(0, 50, 0, 192)
+ExecuteButton.AnchorPoint = Vector2.new(0, 0)
+ExecuteButton.Visible = true
+ExecuteButton.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+ExecuteButton.BackgroundTransparency = 0
+ExecuteButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteButton.BorderSizePixel = 1
+ExecuteButton.ClipsDescendants = false
+ExecuteButton.LayoutOrder = 0
+ExecuteButton.Selectable = true
+ExecuteButton.SelectionGroup = false
+ExecuteButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ExecuteButton.Rotation = 0
+ExecuteButton.AutomaticSize = Enum.AutomaticSize.None
+ExecuteButton.Font = Enum.Font.Legacy
+ExecuteButton.Text = "Execute"
+ExecuteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteButton.TextSize = 20
+ExecuteButton.TextScaled = false
+ExecuteButton.TextWrapped = false
+ExecuteButton.TextXAlignment = Enum.TextXAlignment.Center
+ExecuteButton.TextYAlignment = Enum.TextYAlignment.Center
+ExecuteButton.TextTransparency = 0
+ExecuteButton.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteButton.TextStrokeTransparency = 1
+ExecuteButton.LineHeight = 1
+ExecuteButton.RichText = false
+ExecuteButton.TextTruncate = Enum.TextTruncate.None
+ExecuteButton.MaxVisibleGraphemes = -1
+ExecuteButton.Transparency = 0
+ExecuteButton.Rotation = 0
+ExecuteButton.Transparency = 0
+
+local UICorner = Instance.new("UICorner")
+UICorner.Name = "UICorner"
+UICorner.Parent = ExecuteButton
+
+local ClearButton = Instance.new("TextButton")
+ClearButton.Name = "ClearButton"
+ClearButton.Parent = Frame
+ClearButton.Size = UDim2.new(0, 200, 0, 50)
+ClearButton.Position = UDim2.new(0, 350, 0, 192)
+ClearButton.AnchorPoint = Vector2.new(0, 0)
+ClearButton.Visible = true
+ClearButton.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+ClearButton.BackgroundTransparency = 0
+ClearButton.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ClearButton.BorderSizePixel = 1
+ClearButton.ClipsDescendants = false
+ClearButton.LayoutOrder = 0
+ClearButton.Selectable = true
+ClearButton.SelectionGroup = false
+ClearButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ClearButton.Rotation = 0
+ClearButton.AutomaticSize = Enum.AutomaticSize.None
+ClearButton.Font = Enum.Font.Legacy
+ClearButton.Text = "Clear"
+ClearButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ClearButton.TextSize = 20
+ClearButton.TextScaled = false
+ClearButton.TextWrapped = false
+ClearButton.TextXAlignment = Enum.TextXAlignment.Center
+ClearButton.TextYAlignment = Enum.TextYAlignment.Center
+ClearButton.TextTransparency = 0
+ClearButton.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+ClearButton.TextStrokeTransparency = 1
+ClearButton.LineHeight = 1
+ClearButton.RichText = false
+ClearButton.TextTruncate = Enum.TextTruncate.None
+ClearButton.MaxVisibleGraphemes = -1
+ClearButton.Transparency = 0
+ClearButton.Rotation = 0
+ClearButton.Transparency = 0
+
+local UICorner = Instance.new("UICorner")
+UICorner.Name = "UICorner"
+UICorner.Parent = ClearButton
+
+local BackButton = Instance.new("TextButton")
+BackButton.Name = "BackButton"
+BackButton.Parent = Frame
+BackButton.Size = UDim2.new(0, 90, 0, 50)
+BackButton.Position = UDim2.new(0, 0, 0, 0)
+BackButton.AnchorPoint = Vector2.new(0, 0)
+BackButton.Visible = false
+BackButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BackButton.BackgroundTransparency = 0
+BackButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+BackButton.BorderSizePixel = 1
+BackButton.ClipsDescendants = false
+BackButton.LayoutOrder = 0
+BackButton.Selectable = true
+BackButton.SelectionGroup = false
+BackButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+BackButton.Rotation = 0
+BackButton.AutomaticSize = Enum.AutomaticSize.None
+BackButton.Font = Enum.Font.Legacy
+BackButton.Text = "</>"
+BackButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+BackButton.TextSize = 25
+BackButton.TextScaled = false
+BackButton.TextWrapped = false
+BackButton.TextXAlignment = Enum.TextXAlignment.Center
+BackButton.TextYAlignment = Enum.TextYAlignment.Center
+BackButton.TextTransparency = 0
+BackButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+BackButton.TextStrokeTransparency = 1
+BackButton.LineHeight = 1
+BackButton.RichText = false
+BackButton.TextTruncate = Enum.TextTruncate.None
+BackButton.MaxVisibleGraphemes = -1
+BackButton.Transparency = 0
+BackButton.Rotation = 0
+BackButton.Transparency = 0
+
+local TextBox = Instance.new("TextBox")
+TextBox.Name = "TextBox"
+TextBox.Parent = Frame
+TextBox.Size = UDim2.new(0, 600, 0, 130)
+TextBox.Position = UDim2.new(0, 0, 0, 52)
+TextBox.AnchorPoint = Vector2.new(0, 0)
+TextBox.Visible = true
+TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BackgroundTransparency = 0
+TextBox.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BorderSizePixel = 1
+TextBox.ClipsDescendants = false
+TextBox.LayoutOrder = 0
+TextBox.Selectable = true
+TextBox.SelectionGroup = false
+TextBox.SizeConstraint = Enum.SizeConstraint.RelativeXY
+TextBox.Rotation = 0
+TextBox.AutomaticSize = Enum.AutomaticSize.None
+TextBox.Font = Enum.Font.Legacy
+TextBox.Text = "print(\"Hello\")"
+TextBox.TextColor3 = Color3.fromRGB(0, 255, 0)
+TextBox.TextSize = 8
+TextBox.TextScaled = false
+TextBox.TextWrapped = false
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+TextBox.TextTransparency = 0
+TextBox.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextStrokeTransparency = 1
+TextBox.LineHeight = 1
+TextBox.RichText = false
+TextBox.TextTruncate = Enum.TextTruncate.None
+TextBox.MaxVisibleGraphemes = -1
+TextBox.ClearTextOnFocus = false
+TextBox.MultiLine = false
+TextBox.PlaceholderText = "Welcome  - Moonz Team"
+TextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.CursorPosition = 1
+TextBox.SelectionStart = -1
+TextBox.TextEditable = true
+TextBox.Transparency = 0
+TextBox.Rotation = 0
+TextBox.Transparency = 0
+
+local RestarButton = Instance.new("TextButton")
+RestarButton.Name = "RestarButton"
+RestarButton.Parent = Frame
+RestarButton.Size = UDim2.new(0, 200, 0, 50)
+RestarButton.Position = UDim2.new(0, 30, 0, 90)
+RestarButton.AnchorPoint = Vector2.new(0, 0)
+RestarButton.Visible = false
+RestarButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RestarButton.BackgroundTransparency = 0
+RestarButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+RestarButton.BorderSizePixel = 1
+RestarButton.ClipsDescendants = false
+RestarButton.LayoutOrder = 0
+RestarButton.Selectable = true
+RestarButton.SelectionGroup = false
+RestarButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+RestarButton.Rotation = 0
+RestarButton.AutomaticSize = Enum.AutomaticSize.None
+RestarButton.Font = Enum.Font.Legacy
+RestarButton.Text = "Restart Executor [ Beta ]"
+RestarButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+RestarButton.TextSize = 13
+RestarButton.TextScaled = false
+RestarButton.TextWrapped = false
+RestarButton.TextXAlignment = Enum.TextXAlignment.Center
+RestarButton.TextYAlignment = Enum.TextYAlignment.Center
+RestarButton.TextTransparency = 0
+RestarButton.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+RestarButton.TextStrokeTransparency = 1
+RestarButton.LineHeight = 1
+RestarButton.RichText = false
+RestarButton.TextTruncate = Enum.TextTruncate.None
+RestarButton.MaxVisibleGraphemes = -1
+RestarButton.Transparency = 0
+RestarButton.Rotation = 0
+RestarButton.Transparency = 0
+
+local SetingButton = Instance.new("TextButton")
+SetingButton.Name = "SetingButton"
+SetingButton.Parent = Frame
+SetingButton.Size = UDim2.new(0, 90, 0, 50)
+SetingButton.Position = UDim2.new(0, 0, 0, 0)
+SetingButton.AnchorPoint = Vector2.new(0, 0)
+SetingButton.Visible = true
+SetingButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SetingButton.BackgroundTransparency = 0
+SetingButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+SetingButton.BorderSizePixel = 0
+SetingButton.ClipsDescendants = false
+SetingButton.LayoutOrder = 0
+SetingButton.Selectable = true
+SetingButton.SelectionGroup = false
+SetingButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+SetingButton.Rotation = 0
+SetingButton.AutomaticSize = Enum.AutomaticSize.None
+SetingButton.Font = Enum.Font.Legacy
+SetingButton.Text = "⚙️"
+SetingButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+SetingButton.TextSize = 25
+SetingButton.TextScaled = false
+SetingButton.TextWrapped = false
+SetingButton.TextXAlignment = Enum.TextXAlignment.Center
+SetingButton.TextYAlignment = Enum.TextYAlignment.Center
+SetingButton.TextTransparency = 0
+SetingButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+SetingButton.TextStrokeTransparency = 1
+SetingButton.LineHeight = 1
+SetingButton.RichText = false
+SetingButton.TextTruncate = Enum.TextTruncate.None
+SetingButton.MaxVisibleGraphemes = -1
+SetingButton.Transparency = 0
+SetingButton.Rotation = 0
+SetingButton.Transparency = 0
+
+--[[Button function]]--
+
+
+--ExecuteButton
+ExecuteButton.MouseButton1Click:Connect(function()
+local script = TextBox.Text
+local func = loadstring(script)
+if func then func() end
+end)
+
+--Clear Button 
+ClearButton.MouseButton1Click:Connect(function()
+TextBox.Text = ""
+end)
+
+
+--Restart Button 
+RestarButton.MouseButton1Click:Connect(function()
+  ScreenGui:Destroy()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/akbarhub/universalscripts/refs/heads/main/TESTEXECUTOR"))();
+end)
+
+--SetingButton
+SetingButton.MouseButton1Click:Connect(function()
+  TextBox.Visible = false
+  ExecuteButton.Visible = false
+  ClearButton.Visible = false
+  SetingButton.Visible = false
+  BackButton.Visible = true
+  TestButton.Visible = true
+  RestarButton.Visible = true
+  StatusLabel.Visible = true
+  end)
+  
+  --BackButton
+  BackButton.MouseButton1Click:Connect(function()
+    TextBox.Visible = true
+  ExecuteButton.Visible = true
+  ClearButton.Visible = true
+  SetingButton.Visible = true
+  BackButton.Visible = false
+  TestButton.Visible = false
+  RestarButton.Visible = false
+  StatusLabel.Visible = false
+  end)
+  
+--TestButton
+TestButton.MouseButton1Click:Connect(function()
+  print("Soon")
+end)
+
+--[[Anti Kick Funcition]]--
+
+
+--Anti Kick
+local plr = game:GetService("Players").LocalPlayer
+
+getgenv().Anti = true -- Re-Execute if you change it
+
+local Anti
+Anti = hookmetamethod(game, "__namecall", function(self, ...)
+        if self == plr and getnamecallmethod():lower() == "kick" and getgenv().Anti then
+            return warn("[ANTI-KICK] Client Tried To Call Kick Function On LocalPlayer")
+        end
+        return Anti(self, ...)
+end)
+  
+  
+  --Anti Kick 2
+ 
+  
+  print("Status : 🟣 Undetectect")
+  
+  
+ 
+ 
+ --[[minimizeButton]]--
+local isMinimized = false
+ImageButton.MouseButton1Click:Connect(function()
+isMinimized = not isMinimized
+if isMinimized then
+Frame.Visible = true
+ExecuteButton.Visible = true
+ClearButton.Visible = true
+TextBox.Visible = true
+TextLabel.Visible = true
+BackButton.Visible = false
+TestButton.Visible = false
+SetingButton.Visible = true
+RestarButton.Visible = false
+StatusLabel.Visible = false
+frame.Size = UDim2.new(0, 500, 0, 35)
+minimizeButton.Text = "+"
+else
+Frame.Visible = false
+ExecuteButton.Visible = false
+ClearButton.Visible = false
+TextBox.Visible = false
+TextLabel.Visible = false
+BackButton.Visible = false
+TestButton.Visible = false
+SetingButton.Visible = false
+RestarButton.Visible = false
+StatusLabel.Visible = false
+frame.Size = UDim2.new(0, 500, 0, 350)
+minimizeButton.Text = "-"
+end
+end) 
