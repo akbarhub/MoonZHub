@@ -478,6 +478,786 @@ TextLabel.SizeConstraint = Enum.SizeConstraint.RelativeXY
 TextLabel.Rotation = 0
 TextLabel.AutomaticSize = Enum.AutomaticSize.None
 TextLabel.Font = Enum.Font.Legacy
+TextLabel.Text = "Moonz Executors V2.9"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 18
+TextLabel.TextScaled = false
+TextLabel.TextWrapped = false
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel.TextYAlignment = Enum.TextYAlignment.Center
+TextLabel.TextTransparency = 0
+TextLabel.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextStrokeTransparency = 1
+TextLabel.LineHeight = 1
+TextLabel.RichText = false
+TextLabel.TextTruncate = Enum.TextTruncate.None
+TextLabel.MaxVisibleGraphemes = -1
+TextLabel.Transparency = 0
+TextLabel.Rotation = 0
+TextLabel.Transparency = 0
+
+local TextBox = Instance.new("TextBox")
+TextBox.Name = "TextBox"
+TextBox.Parent = Frame
+TextBox.Size = UDim2.new(0, 600, 0, 130)
+TextBox.Position = UDim2.new(0, 0, 0, 52)
+TextBox.AnchorPoint = Vector2.new(0, 0)
+TextBox.Visible = true
+TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BackgroundTransparency = 0
+TextBox.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BorderSizePixel = 1
+TextBox.ClipsDescendants = false
+TextBox.LayoutOrder = 0
+TextBox.Selectable = true
+TextBox.SelectionGroup = false
+TextBox.SizeConstraint = Enum.SizeConstraint.RelativeXY
+TextBox.Rotation = 0
+TextBox.AutomaticSize = Enum.AutomaticSize.None
+TextBox.Font = Enum.Font.Legacy
+TextBox.Text = "print(\"Hello\")"
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 8
+TextBox.TextScaled = false
+TextBox.TextWrapped = false
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+TextBox.TextTransparency = 0
+TextBox.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextStrokeTransparency = 1
+TextBox.LineHeight = 1
+TextBox.RichText = false
+TextBox.TextTruncate = Enum.TextTruncate.None
+TextBox.MaxVisibleGraphemes = -1
+TextBox.ClearTextOnFocus = false
+TextBox.MultiLine = false
+TextBox.PlaceholderText = "Welcome  - Moonz Team"
+TextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.CursorPosition = 1
+TextBox.SelectionStart = -1
+TextBox.TextEditable = true
+TextBox.Transparency = 0
+TextBox.Rotation = 0
+TextBox.Transparency = 0
+
+local StatusLabel = Instance.new("TextLabel")
+StatusLabel.Name = "StatusLabel"
+StatusLabel.Parent = Frame
+StatusLabel.Size = UDim2.new(0, 200, 0, 50)
+StatusLabel.Position = UDim2.new(0, 30, 0, 200)
+StatusLabel.AnchorPoint = Vector2.new(0, 0)
+StatusLabel.Visible = false
+StatusLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+StatusLabel.BackgroundTransparency = 0
+StatusLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StatusLabel.BorderSizePixel = 1
+StatusLabel.ClipsDescendants = false
+StatusLabel.LayoutOrder = 0
+StatusLabel.Selectable = false
+StatusLabel.SelectionGroup = false
+StatusLabel.SizeConstraint = Enum.SizeConstraint.RelativeXY
+StatusLabel.Rotation = 0
+StatusLabel.AutomaticSize = Enum.AutomaticSize.None
+StatusLabel.Font = Enum.Font.Legacy
+StatusLabel.Text = "Status : 🟣 Undetected"
+StatusLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+StatusLabel.TextSize = 15
+StatusLabel.TextScaled = false
+StatusLabel.TextWrapped = false
+StatusLabel.TextXAlignment = Enum.TextXAlignment.Center
+StatusLabel.TextYAlignment = Enum.TextYAlignment.Center
+StatusLabel.TextTransparency = 0
+StatusLabel.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+StatusLabel.TextStrokeTransparency = 1
+StatusLabel.LineHeight = 1
+StatusLabel.RichText = false
+StatusLabel.TextTruncate = Enum.TextTruncate.None
+StatusLabel.MaxVisibleGraphemes = -1
+StatusLabel.Transparency = 0
+StatusLabel.Rotation = 0
+StatusLabel.Transparency = 0
+
+
+--[[Button function]]--
+
+
+--ExecuteButton
+ExecuteButton.MouseButton1Click:Connect(function()
+local script = TextBox.Text
+local func = loadstring(script)
+if func then func() end
+end)
+
+--Clear Button 
+ClearButton.MouseButton1Click:Connect(function()
+TextBox.Text = ""
+end)
+
+
+--Restart Button 
+RestarButton.MouseButton1Click:Connect(function()
+  ScreenGui:Destroy()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/akbarhub/MoonZHub/refs/heads/main/Executorv684"))();
+end)
+
+--SetingButton
+SetingButton.MouseButton1Click:Connect(function()
+  TextBox.Visible = false
+  ExecuteButton.Visible = false
+  ClearButton.Visible = false
+  SetingButton.Visible = false
+  BackButton.Visible = true
+  TestButton.Visible = true
+  RestarButton.Visible = true
+  StatusLabel.Visible = true
+  BackButton2.Visible = false
+  DexButton.Visible = false
+  Infiniteyeild.Visible = false
+  NextButton.Visible = true
+  end)
+  
+  --BackButton
+  BackButton.MouseButton1Click:Connect(function()
+    TextBox.Visible = true
+  ExecuteButton.Visible = true
+  ClearButton.Visible = true
+  SetingButton.Visible = true
+  BackButton.Visible = false
+  TestButton.Visible = false
+  RestarButton.Visible = false
+  StatusLabel.Visible = false
+  DexButton.Visible = false
+  BackButton2.Visible = false
+  Infiniteyeild.Visible = false
+  NextButton.Visible = false
+  end)
+  
+  --NextButton
+  NextButton.MouseButton1Click:Connect(function()
+    TextBox.Visible = false
+  ExecuteButton.Visible = false
+  ClearButton.Visible = false
+  SetingButton.Visible = true
+  BackButton.Visible = false
+  TestButton.Visible = false
+  RestarButton.Visible = false
+  StatusLabel.Visible = false
+  DexButton.Visible = true
+  BackButton2.Visible = true
+  Infiniteyeild.Visible = true
+  NextButton.Visible = false
+  end)
+  
+  
+ --BackButton2
+ BackButton2.MouseButton1Click:Connect(function()
+   TextBox.Visible = false
+  ExecuteButton.Visible = false
+  ClearButton.Visible = false
+  SetingButton.Visible = false
+  BackButton.Visible = true
+  TestButton.Visible = true
+  RestarButton.Visible = true
+  StatusLabel.Visible = false
+  DexButton.Visible = false
+  BackButton2.Visible = false
+  Infiniteyeild.Visible = false
+  NextButton.Visible = true
+  end)
+    
+    --TestButton
+TestButton.MouseButton1Click:Connect(function()
+  game:GetService("StarterGui"):SetCore("DevConsoleVisible", true)
+end)
+
+warn("This Is A Beta!!!! Many Bugs!!")
+warn("Executor Loaded")
+
+
+--Infinite yeild Button
+Infiniteyeild.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+--DexButton
+DexButton.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Dark-dex-47096"))()
+  end)
+
+--[[Anti Kick Funcition]]--
+
+--Anti Kick
+local plr = game:GetService("Players").LocalPlayer
+
+getgenv().Anti = true -- Re-Execute if you change it
+
+local Anti
+Anti = hookmetamethod(game, "__namecall", function(self, ...)
+        if self == plr and getnamecallmethod():lower() == "kick" and getgenv().Anti then
+            return warn("[ANTI-KICK] Client Tried To Call Kick Function On LocalPlayer")
+        end
+        return Anti(self, ...)
+end)
+  
+  
+  --Anti Ban 
+local X;
+X = hookmetamethod(game, "__namecall", function(self, ...)
+   if getnamecallmethod() == "Ban" then
+       local eval1 = {false}
+       local eval2 = {false}
+       local args = {...}
+       if debug.validlevel(3) and self.Parent == nil then
+           local stack = debug.getstack(3)
+           local counter = 0
+           local expected;
+           for i,v in pairs(stack) do
+               if v == game.Players.LocalPlayer.Name or v == "Ban" or v == "Packet" or v == "Network" then
+                   counter = counter + 1
+               elseif type(v) == "number" then
+                   if type(expected) == "number" then
+                       expected = expected + v
+                   else
+                       expected = v
+                   end
+               end
+           end
+           if counter == expected then
+               eval1 = {true, counter+5}
+           end
+       end
+       if eval1[1] then
+           if #args == eval1[2] then
+               local counter = 0
+               local outgoingkey;
+               for i,v in pairs(args) do
+                   if v == game.Players.LocalPlayer.Name or v == "Ban" or v == "Packet" or v == "Network" then
+                       counter = counter + 1
+                   elseif tostring(i) == "userdata: 0x000000001bdfb8ea" then --current outgoing key address, could change if roblox updates
+                       outgoingkey = v
+                   end
+                   if counter == eval1[2] then
+                       eval2 = {true, outgoingkey}
+                   end
+               end
+           end
+           if eval2[1] then
+               game:GetService("NetworkClient"):SetOutgoingKBPSLimit(0, outgoingkey) --stops ban packets (requires outgoing key to set it to 0)
+               game.Players.LocalPlayer:Kick("Game attempted to ban you but was blocked") --kicked because it'll detect the namecall being blocked
+               return wait(9e9)
+           end
+       end
+   end
+   return X(self, ...)
+end)
+
+
+--Anti Kick 3
+local first = false
+if hookmetamethod then
+    OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
+        local NameCallMethod = getnamecallmethod()
+
+        if tostring(string.lower(NameCallMethod)) == "kick" and not first then
+            print("AntiKick: blocked attempt to kick you.")
+            return nil
+        end
+
+        return OldNameCall(Self, ...)
+    end)
+    if not First then
+        First = true
+    end
+else
+    warn("AntiKick: unsupported executor, missing hookmetamethod function.")
+    return
+end
+ 
+ 
+ 
+ --[[minimizeButton]]--
+local isMinimized = false
+ImageButton.MouseButton1Click:Connect(function()
+isMinimized = not isMinimized
+if isMinimized then
+Frame.Visible = true
+ExecuteButton.Visible = true
+ClearButton.Visible = true
+TextBox.Visible = true
+TextLabel.Visible = true
+BackButton.Visible = false
+TestButton.Visible = false
+SetingButton.Visible = true
+RestarButton.Visible = false
+StatusLabel.Visible = false
+BackButton2.Visible = false
+Infiniteyeild.Visibe = false
+DexButton.Visibe = false
+NextButton.Visible = false
+Frame.Size = UDim2.new(0, 600, 0, 250)
+minimizeButton.Text = "+"
+else
+Frame.Visible = false
+ExecuteButton.Visible = false
+ClearButton.Visible = false
+TextBox.Visible = false
+TextLabel.Visible = false
+BackButton.Visible = false
+TestButton.Visible = false
+SetingButton.Visible = false
+RestarButton.Visible = false
+StatusLabel.Visible = false
+BackButton2.Visible = false
+Infiniteyeild.Visible = false
+DexButton.Visible = false
+NextButton.Visible = false 
+Frame.Size = UDim2.new(0, 600, 0, 250)
+minimizeButton.Text = "-"
+end
+end) ImageButton.SliceScale = 1
+ImageButton.TileSize = UDim2.new(1, 0, 1, 0)
+ImageButton.ImageRectOffset = Vector2.new(0, 0)
+ImageButton.ImageRectSize = Vector2.new(0, 0)
+ImageButton.ResampleMode = Enum.ResamplerMode.Default
+ImageButton.Transparency = 0
+ImageButton.Rotation = 0
+ImageButton.Transparency = 0
+
+local UICorner = Instance.new("UICorner")
+UICorner.Name = "UICorner"
+UICorner.Parent = ImageButton
+
+local UIStroke = Instance.new("UIStroke")
+UIStroke.Name = "UIStroke"
+UIStroke.Parent = ImageButton
+UIStroke.Enabled = true
+UIStroke.Color = Color3.fromRGB(84, 153, 255)
+UIStroke.Thickness = 3
+UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke.Transparency = 0
+UIStroke.LineJoinMode = Enum.LineJoinMode.Round
+UIStroke.Color = Color3.fromRGB(84, 153, 255)
+UIStroke.Transparency = 0
+
+local Frame = Instance.new("Frame")
+Frame.Name = "Frame"
+Frame.Parent = ScreenGui
+Frame.Size = UDim2.new(0, 600, 0, 250)
+Frame.Position = UDim2.new(0, 130, 0, 30)
+Frame.AnchorPoint = Vector2.new(0, 0)
+Frame.Visible = true
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BackgroundTransparency = 0
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 1
+Frame.ClipsDescendants = false
+Frame.LayoutOrder = 0
+Frame.Selectable = false
+Frame.SelectionGroup = false
+Frame.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Frame.Rotation = 0
+Frame.AutomaticSize = Enum.AutomaticSize.None
+Frame.Transparency = 0
+Frame.Rotation = 0
+Frame.Transparency = 0
+
+local TestButton = Instance.new("TextButton")
+TestButton.Name = "TestButton"
+TestButton.Parent = Frame
+TestButton.Size = UDim2.new(0, 200, 0, 50)
+TestButton.Position = UDim2.new(0, 370, 0, 90)
+TestButton.AnchorPoint = Vector2.new(0, 0)
+TestButton.Visible = false
+TestButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TestButton.BackgroundTransparency = 0
+TestButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TestButton.BorderSizePixel = 1
+TestButton.ClipsDescendants = false
+TestButton.LayoutOrder = 0
+TestButton.Selectable = true
+TestButton.SelectionGroup = false
+TestButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+TestButton.Rotation = 0
+TestButton.AutomaticSize = Enum.AutomaticSize.None
+TestButton.Font = Enum.Font.Legacy
+TestButton.Text = "Open Console"
+TestButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TestButton.TextSize = 16
+TestButton.TextScaled = false
+TestButton.TextWrapped = false
+TestButton.TextXAlignment = Enum.TextXAlignment.Center
+TestButton.TextYAlignment = Enum.TextYAlignment.Center
+TestButton.TextTransparency = 0
+TestButton.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+TestButton.TextStrokeTransparency = 1
+TestButton.LineHeight = 1
+TestButton.RichText = false
+TestButton.TextTruncate = Enum.TextTruncate.None
+TestButton.MaxVisibleGraphemes = -1
+TestButton.Transparency = 0
+TestButton.Rotation = 0
+TestButton.Transparency = 0
+
+local BackButton2 = Instance.new("TextButton")
+BackButton2.Name = "BackButton2"
+BackButton2.Parent = Frame
+BackButton2.Size = UDim2.new(0, 90, 0, 50)
+BackButton2.Position = UDim2.new(0, 505, 0, 190)
+BackButton2.AnchorPoint = Vector2.new(0, 0)
+BackButton2.Visible = false
+BackButton2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BackButton2.BackgroundTransparency = 0
+BackButton2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+BackButton2.BorderSizePixel = 1
+BackButton2.ClipsDescendants = false
+BackButton2.LayoutOrder = 0
+BackButton2.Selectable = true
+BackButton2.SelectionGroup = false
+BackButton2.SizeConstraint = Enum.SizeConstraint.RelativeXY
+BackButton2.Rotation = 0
+BackButton2.AutomaticSize = Enum.AutomaticSize.None
+BackButton2.Font = Enum.Font.Legacy
+BackButton2.Text = "Back"
+BackButton2.TextColor3 = Color3.fromRGB(255, 255, 255)
+BackButton2.TextSize = 25
+BackButton2.TextScaled = false
+BackButton2.TextWrapped = false
+BackButton2.TextXAlignment = Enum.TextXAlignment.Center
+BackButton2.TextYAlignment = Enum.TextYAlignment.Center
+BackButton2.TextTransparency = 0
+BackButton2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+BackButton2.TextStrokeTransparency = 1
+BackButton2.LineHeight = 1
+BackButton2.RichText = false
+BackButton2.TextTruncate = Enum.TextTruncate.None
+BackButton2.MaxVisibleGraphemes = -1
+BackButton2.Transparency = 0
+BackButton2.Rotation = 0
+BackButton2.Transparency = 0
+
+local NextButton = Instance.new("TextButton")
+NextButton.Name = "NextButton"
+NextButton.Parent = Frame
+NextButton.Size = UDim2.new(0, 90, 0, 50)
+NextButton.Position = UDim2.new(0, 505, 0, 190)
+NextButton.AnchorPoint = Vector2.new(0, 0)
+NextButton.Visible = false
+NextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+NextButton.BackgroundTransparency = 0
+NextButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+NextButton.BorderSizePixel = 1
+NextButton.ClipsDescendants = false
+NextButton.LayoutOrder = 0
+NextButton.Selectable = true
+NextButton.SelectionGroup = false
+NextButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+NextButton.Rotation = 0
+NextButton.AutomaticSize = Enum.AutomaticSize.None
+NextButton.Font = Enum.Font.Legacy
+NextButton.Text = "Next"
+NextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+NextButton.TextSize = 25
+NextButton.TextScaled = false
+NextButton.TextWrapped = false
+NextButton.TextXAlignment = Enum.TextXAlignment.Center
+NextButton.TextYAlignment = Enum.TextYAlignment.Center
+NextButton.TextTransparency = 0
+NextButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+NextButton.TextStrokeTransparency = 1
+NextButton.LineHeight = 1
+NextButton.RichText = false
+NextButton.TextTruncate = Enum.TextTruncate.None
+NextButton.MaxVisibleGraphemes = -1
+NextButton.Transparency = 0
+NextButton.Rotation = 0
+NextButton.Transparency = 0
+
+local ExecuteButton = Instance.new("TextButton")
+ExecuteButton.Name = "ExecuteButton"
+ExecuteButton.Parent = Frame
+ExecuteButton.Size = UDim2.new(0, 200, 0, 50)
+ExecuteButton.Position = UDim2.new(0, 50, 0, 192)
+ExecuteButton.AnchorPoint = Vector2.new(0, 0)
+ExecuteButton.Visible = true
+ExecuteButton.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+ExecuteButton.BackgroundTransparency = 0
+ExecuteButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteButton.BorderSizePixel = 1
+ExecuteButton.ClipsDescendants = false
+ExecuteButton.LayoutOrder = 0
+ExecuteButton.Selectable = true
+ExecuteButton.SelectionGroup = false
+ExecuteButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ExecuteButton.Rotation = 0
+ExecuteButton.AutomaticSize = Enum.AutomaticSize.None
+ExecuteButton.Font = Enum.Font.Legacy
+ExecuteButton.Text = "Execute"
+ExecuteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteButton.TextSize = 20
+ExecuteButton.TextScaled = false
+ExecuteButton.TextWrapped = false
+ExecuteButton.TextXAlignment = Enum.TextXAlignment.Center
+ExecuteButton.TextYAlignment = Enum.TextYAlignment.Center
+ExecuteButton.TextTransparency = 0
+ExecuteButton.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteButton.TextStrokeTransparency = 1
+ExecuteButton.LineHeight = 1
+ExecuteButton.RichText = false
+ExecuteButton.TextTruncate = Enum.TextTruncate.None
+ExecuteButton.MaxVisibleGraphemes = -1
+ExecuteButton.Transparency = 0
+ExecuteButton.Rotation = 0
+ExecuteButton.Transparency = 0
+
+local UICorner = Instance.new("UICorner")
+UICorner.Name = "UICorner"
+UICorner.Parent = ExecuteButton
+
+local DexButton = Instance.new("TextButton")
+DexButton.Name = "DexButton"
+DexButton.Parent = Frame
+DexButton.Size = UDim2.new(0, 200, 0, 50)
+DexButton.Position = UDim2.new(0, 30, 0, 90)
+DexButton.AnchorPoint = Vector2.new(0, 0)
+DexButton.Visible = false
+DexButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DexButton.BackgroundTransparency = 0
+DexButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+DexButton.BorderSizePixel = 1
+DexButton.ClipsDescendants = false
+DexButton.LayoutOrder = 0
+DexButton.Selectable = true
+DexButton.SelectionGroup = false
+DexButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+DexButton.Rotation = 0
+DexButton.AutomaticSize = Enum.AutomaticSize.None
+DexButton.Font = Enum.Font.Legacy
+DexButton.Text = "Dex"
+DexButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+DexButton.TextSize = 20
+DexButton.TextScaled = false
+DexButton.TextWrapped = false
+DexButton.TextXAlignment = Enum.TextXAlignment.Center
+DexButton.TextYAlignment = Enum.TextYAlignment.Center
+DexButton.TextTransparency = 0
+DexButton.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+DexButton.TextStrokeTransparency = 1
+DexButton.LineHeight = 1
+DexButton.RichText = false
+DexButton.TextTruncate = Enum.TextTruncate.None
+DexButton.MaxVisibleGraphemes = -1
+DexButton.Transparency = 0
+DexButton.Rotation = 0
+DexButton.Transparency = 0
+
+local Infiniteyeild = Instance.new("TextButton")
+Infiniteyeild.Name = "Infiniteyeild"
+Infiniteyeild.Parent = Frame
+Infiniteyeild.Size = UDim2.new(0, 200, 0, 50)
+Infiniteyeild.Position = UDim2.new(0, 370, 0, 90)
+Infiniteyeild.AnchorPoint = Vector2.new(0, 0)
+Infiniteyeild.Visible = false
+Infiniteyeild.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Infiniteyeild.BackgroundTransparency = 0
+Infiniteyeild.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Infiniteyeild.BorderSizePixel = 1
+Infiniteyeild.ClipsDescendants = false
+Infiniteyeild.LayoutOrder = 0
+Infiniteyeild.Selectable = true
+Infiniteyeild.SelectionGroup = false
+Infiniteyeild.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Infiniteyeild.Rotation = 0
+Infiniteyeild.AutomaticSize = Enum.AutomaticSize.None
+Infiniteyeild.Font = Enum.Font.Legacy
+Infiniteyeild.Text = "Infinite yeild"
+Infiniteyeild.TextColor3 = Color3.fromRGB(255, 255, 255)
+Infiniteyeild.TextSize = 16
+Infiniteyeild.TextScaled = false
+Infiniteyeild.TextWrapped = false
+Infiniteyeild.TextXAlignment = Enum.TextXAlignment.Center
+Infiniteyeild.TextYAlignment = Enum.TextYAlignment.Center
+Infiniteyeild.TextTransparency = 0
+Infiniteyeild.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+Infiniteyeild.TextStrokeTransparency = 1
+Infiniteyeild.LineHeight = 1
+Infiniteyeild.RichText = false
+Infiniteyeild.TextTruncate = Enum.TextTruncate.None
+Infiniteyeild.MaxVisibleGraphemes = -1
+Infiniteyeild.Transparency = 0
+Infiniteyeild.Rotation = 0
+Infiniteyeild.Transparency = 0
+
+local RestarButton = Instance.new("TextButton")
+RestarButton.Name = "RestarButton"
+RestarButton.Parent = Frame
+RestarButton.Size = UDim2.new(0, 200, 0, 50)
+RestarButton.Position = UDim2.new(0, 30, 0, 90)
+RestarButton.AnchorPoint = Vector2.new(0, 0)
+RestarButton.Visible = false
+RestarButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RestarButton.BackgroundTransparency = 0
+RestarButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+RestarButton.BorderSizePixel = 1
+RestarButton.ClipsDescendants = false
+RestarButton.LayoutOrder = 0
+RestarButton.Selectable = true
+RestarButton.SelectionGroup = false
+RestarButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+RestarButton.Rotation = 0
+RestarButton.AutomaticSize = Enum.AutomaticSize.None
+RestarButton.Font = Enum.Font.Legacy
+RestarButton.Text = "Restart Executor [ Beta ]"
+RestarButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+RestarButton.TextSize = 13
+RestarButton.TextScaled = false
+RestarButton.TextWrapped = false
+RestarButton.TextXAlignment = Enum.TextXAlignment.Center
+RestarButton.TextYAlignment = Enum.TextYAlignment.Center
+RestarButton.TextTransparency = 0
+RestarButton.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+RestarButton.TextStrokeTransparency = 1
+RestarButton.LineHeight = 1
+RestarButton.RichText = false
+RestarButton.TextTruncate = Enum.TextTruncate.None
+RestarButton.MaxVisibleGraphemes = -1
+RestarButton.Transparency = 0
+RestarButton.Rotation = 0
+RestarButton.Transparency = 0
+
+local ClearButton = Instance.new("TextButton")
+ClearButton.Name = "ClearButton"
+ClearButton.Parent = Frame
+ClearButton.Size = UDim2.new(0, 200, 0, 50)
+ClearButton.Position = UDim2.new(0, 350, 0, 192)
+ClearButton.AnchorPoint = Vector2.new(0, 0)
+ClearButton.Visible = true
+ClearButton.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+ClearButton.BackgroundTransparency = 0
+ClearButton.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ClearButton.BorderSizePixel = 1
+ClearButton.ClipsDescendants = false
+ClearButton.LayoutOrder = 0
+ClearButton.Selectable = true
+ClearButton.SelectionGroup = false
+ClearButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ClearButton.Rotation = 0
+ClearButton.AutomaticSize = Enum.AutomaticSize.None
+ClearButton.Font = Enum.Font.Legacy
+ClearButton.Text = "Clear"
+ClearButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ClearButton.TextSize = 20
+ClearButton.TextScaled = false
+ClearButton.TextWrapped = false
+ClearButton.TextXAlignment = Enum.TextXAlignment.Center
+ClearButton.TextYAlignment = Enum.TextYAlignment.Center
+ClearButton.TextTransparency = 0
+ClearButton.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+ClearButton.TextStrokeTransparency = 1
+ClearButton.LineHeight = 1
+ClearButton.RichText = false
+ClearButton.TextTruncate = Enum.TextTruncate.None
+ClearButton.MaxVisibleGraphemes = -1
+ClearButton.Transparency = 0
+ClearButton.Rotation = 0
+ClearButton.Transparency = 0
+
+local UICorner = Instance.new("UICorner")
+UICorner.Name = "UICorner"
+UICorner.Parent = ClearButton
+
+local SetingButton = Instance.new("TextButton")
+SetingButton.Name = "SetingButton"
+SetingButton.Parent = Frame
+SetingButton.Size = UDim2.new(0, 90, 0, 50)
+SetingButton.Position = UDim2.new(0, 0, 0, 0)
+SetingButton.AnchorPoint = Vector2.new(0, 0)
+SetingButton.Visible = true
+SetingButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SetingButton.BackgroundTransparency = 0
+SetingButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+SetingButton.BorderSizePixel = 0
+SetingButton.ClipsDescendants = false
+SetingButton.LayoutOrder = 0
+SetingButton.Selectable = true
+SetingButton.SelectionGroup = false
+SetingButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+SetingButton.Rotation = 0
+SetingButton.AutomaticSize = Enum.AutomaticSize.None
+SetingButton.Font = Enum.Font.Legacy
+SetingButton.Text = "⚙️"
+SetingButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+SetingButton.TextSize = 25
+SetingButton.TextScaled = false
+SetingButton.TextWrapped = false
+SetingButton.TextXAlignment = Enum.TextXAlignment.Center
+SetingButton.TextYAlignment = Enum.TextYAlignment.Center
+SetingButton.TextTransparency = 0
+SetingButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+SetingButton.TextStrokeTransparency = 1
+SetingButton.LineHeight = 1
+SetingButton.RichText = false
+SetingButton.TextTruncate = Enum.TextTruncate.None
+SetingButton.MaxVisibleGraphemes = -1
+SetingButton.Transparency = 0
+SetingButton.Rotation = 0
+SetingButton.Transparency = 0
+
+local BackButton = Instance.new("TextButton")
+BackButton.Name = "BackButton"
+BackButton.Parent = Frame
+BackButton.Size = UDim2.new(0, 90, 0, 50)
+BackButton.Position = UDim2.new(0, 0, 0, 0)
+BackButton.AnchorPoint = Vector2.new(0, 0)
+BackButton.Visible = false
+BackButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BackButton.BackgroundTransparency = 0
+BackButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+BackButton.BorderSizePixel = 1
+BackButton.ClipsDescendants = false
+BackButton.LayoutOrder = 0
+BackButton.Selectable = true
+BackButton.SelectionGroup = false
+BackButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+BackButton.Rotation = 0
+BackButton.AutomaticSize = Enum.AutomaticSize.None
+BackButton.Font = Enum.Font.Legacy
+BackButton.Text = "</>"
+BackButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+BackButton.TextSize = 25
+BackButton.TextScaled = false
+BackButton.TextWrapped = false
+BackButton.TextXAlignment = Enum.TextXAlignment.Center
+BackButton.TextYAlignment = Enum.TextYAlignment.Center
+BackButton.TextTransparency = 0
+BackButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+BackButton.TextStrokeTransparency = 1
+BackButton.LineHeight = 1
+BackButton.RichText = false
+BackButton.TextTruncate = Enum.TextTruncate.None
+BackButton.MaxVisibleGraphemes = -1
+BackButton.Transparency = 0
+BackButton.Rotation = 0
+BackButton.Transparency = 0
+
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Name = "TextLabel"
+TextLabel.Parent = Frame
+TextLabel.Size = UDim2.new(0, 500, 0, 50)
+TextLabel.Position = UDim2.new(0, 100, 0, 0)
+TextLabel.AnchorPoint = Vector2.new(0, 0)
+TextLabel.Visible = true
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BackgroundTransparency = 0
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 1
+TextLabel.ClipsDescendants = false
+TextLabel.LayoutOrder = 0
+TextLabel.Selectable = false
+TextLabel.SelectionGroup = false
+TextLabel.SizeConstraint = Enum.SizeConstraint.RelativeXY
+TextLabel.Rotation = 0
+TextLabel.AutomaticSize = Enum.AutomaticSize.None
+TextLabel.Font = Enum.Font.Legacy
 TextLabel.Text = "Moonz Executors V2.8"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 18
