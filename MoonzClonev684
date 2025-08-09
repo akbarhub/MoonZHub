@@ -51,12 +51,12 @@ local UIStroke = Instance.new("UIStroke")
 UIStroke.Name = "UIStroke"
 UIStroke.Parent = ImageButton
 UIStroke.Enabled = true
-UIStroke.Color = Color3.fromRGB(64, 229, 255)
+UIStroke.Color = Color3.fromRGB(84, 153, 255)
 UIStroke.Thickness = 3
 UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
 UIStroke.Transparency = 0
 UIStroke.LineJoinMode = Enum.LineJoinMode.Round
-UIStroke.Color = Color3.fromRGB(64, 229, 255)
+UIStroke.Color = Color3.fromRGB(84, 153, 255)
 UIStroke.Transparency = 0
 
 local Frame = Instance.new("Frame")
@@ -100,9 +100,9 @@ TestButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
 TestButton.Rotation = 0
 TestButton.AutomaticSize = Enum.AutomaticSize.None
 TestButton.Font = Enum.Font.Legacy
-TestButton.Text = "Copy New Update 684"
+TestButton.Text = "Open Console"
 TestButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-TestButton.TextSize = 13
+TestButton.TextSize = 16
 TestButton.TextScaled = false
 TestButton.TextWrapped = false
 TestButton.TextXAlignment = Enum.TextXAlignment.Center
@@ -117,80 +117,6 @@ TestButton.MaxVisibleGraphemes = -1
 TestButton.Transparency = 0
 TestButton.Rotation = 0
 TestButton.Transparency = 0
-
-local StatusLabel = Instance.new("TextLabel")
-StatusLabel.Name = "StatusLabel"
-StatusLabel.Parent = Frame
-StatusLabel.Size = UDim2.new(0, 200, 0, 50)
-StatusLabel.Position = UDim2.new(0, 30, 0, 200)
-StatusLabel.AnchorPoint = Vector2.new(0, 0)
-StatusLabel.Visible = false
-StatusLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-StatusLabel.BackgroundTransparency = 0
-StatusLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-StatusLabel.BorderSizePixel = 1
-StatusLabel.ClipsDescendants = false
-StatusLabel.LayoutOrder = 0
-StatusLabel.Selectable = false
-StatusLabel.SelectionGroup = false
-StatusLabel.SizeConstraint = Enum.SizeConstraint.RelativeXY
-StatusLabel.Rotation = 0
-StatusLabel.AutomaticSize = Enum.AutomaticSize.None
-StatusLabel.Font = Enum.Font.Legacy
-StatusLabel.Text = "Status : 🟣 Undetected"
-StatusLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-StatusLabel.TextSize = 15
-StatusLabel.TextScaled = false
-StatusLabel.TextWrapped = false
-StatusLabel.TextXAlignment = Enum.TextXAlignment.Center
-StatusLabel.TextYAlignment = Enum.TextYAlignment.Center
-StatusLabel.TextTransparency = 0
-StatusLabel.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-StatusLabel.TextStrokeTransparency = 1
-StatusLabel.LineHeight = 1
-StatusLabel.RichText = false
-StatusLabel.TextTruncate = Enum.TextTruncate.None
-StatusLabel.MaxVisibleGraphemes = -1
-StatusLabel.Transparency = 0
-StatusLabel.Rotation = 0
-StatusLabel.Transparency = 0
-
-local TextLabel = Instance.new("TextLabel")
-TextLabel.Name = "TextLabel"
-TextLabel.Parent = Frame
-TextLabel.Size = UDim2.new(0, 500, 0, 50)
-TextLabel.Position = UDim2.new(0, 100, 0, 0)
-TextLabel.AnchorPoint = Vector2.new(0, 0)
-TextLabel.Visible = true
-TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BackgroundTransparency = 0
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 1
-TextLabel.ClipsDescendants = false
-TextLabel.LayoutOrder = 0
-TextLabel.Selectable = false
-TextLabel.SelectionGroup = false
-TextLabel.SizeConstraint = Enum.SizeConstraint.RelativeXY
-TextLabel.Rotation = 0
-TextLabel.AutomaticSize = Enum.AutomaticSize.None
-TextLabel.Font = Enum.Font.Legacy
-TextLabel.Text = "Moonz Executors V2.6"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 18
-TextLabel.TextScaled = false
-TextLabel.TextWrapped = false
-TextLabel.TextXAlignment = Enum.TextXAlignment.Left
-TextLabel.TextYAlignment = Enum.TextYAlignment.Center
-TextLabel.TextTransparency = 0
-TextLabel.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextStrokeTransparency = 1
-TextLabel.LineHeight = 1
-TextLabel.RichText = false
-TextLabel.TextTruncate = Enum.TextTruncate.None
-TextLabel.MaxVisibleGraphemes = -1
-TextLabel.Transparency = 0
-TextLabel.Rotation = 0
-TextLabel.Transparency = 0
 
 local ExecuteButton = Instance.new("TextButton")
 ExecuteButton.Name = "ExecuteButton"
@@ -232,6 +158,43 @@ ExecuteButton.Transparency = 0
 local UICorner = Instance.new("UICorner")
 UICorner.Name = "UICorner"
 UICorner.Parent = ExecuteButton
+
+local RestarButton = Instance.new("TextButton")
+RestarButton.Name = "RestarButton"
+RestarButton.Parent = Frame
+RestarButton.Size = UDim2.new(0, 200, 0, 50)
+RestarButton.Position = UDim2.new(0, 30, 0, 90)
+RestarButton.AnchorPoint = Vector2.new(0, 0)
+RestarButton.Visible = false
+RestarButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RestarButton.BackgroundTransparency = 0
+RestarButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+RestarButton.BorderSizePixel = 1
+RestarButton.ClipsDescendants = false
+RestarButton.LayoutOrder = 0
+RestarButton.Selectable = true
+RestarButton.SelectionGroup = false
+RestarButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+RestarButton.Rotation = 0
+RestarButton.AutomaticSize = Enum.AutomaticSize.None
+RestarButton.Font = Enum.Font.Legacy
+RestarButton.Text = "Restart Executor [ Beta ]"
+RestarButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+RestarButton.TextSize = 13
+RestarButton.TextScaled = false
+RestarButton.TextWrapped = false
+RestarButton.TextXAlignment = Enum.TextXAlignment.Center
+RestarButton.TextYAlignment = Enum.TextYAlignment.Center
+RestarButton.TextTransparency = 0
+RestarButton.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+RestarButton.TextStrokeTransparency = 1
+RestarButton.LineHeight = 1
+RestarButton.RichText = false
+RestarButton.TextTruncate = Enum.TextTruncate.None
+RestarButton.MaxVisibleGraphemes = -1
+RestarButton.Transparency = 0
+RestarButton.Rotation = 0
+RestarButton.Transparency = 0
 
 local ClearButton = Instance.new("TextButton")
 ClearButton.Name = "ClearButton"
@@ -311,6 +274,43 @@ BackButton.Transparency = 0
 BackButton.Rotation = 0
 BackButton.Transparency = 0
 
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Name = "TextLabel"
+TextLabel.Parent = Frame
+TextLabel.Size = UDim2.new(0, 500, 0, 50)
+TextLabel.Position = UDim2.new(0, 100, 0, 0)
+TextLabel.AnchorPoint = Vector2.new(0, 0)
+TextLabel.Visible = true
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BackgroundTransparency = 0
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 1
+TextLabel.ClipsDescendants = false
+TextLabel.LayoutOrder = 0
+TextLabel.Selectable = false
+TextLabel.SelectionGroup = false
+TextLabel.SizeConstraint = Enum.SizeConstraint.RelativeXY
+TextLabel.Rotation = 0
+TextLabel.AutomaticSize = Enum.AutomaticSize.None
+TextLabel.Font = Enum.Font.Legacy
+TextLabel.Text = "Moonz Executors V2.7"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 18
+TextLabel.TextScaled = false
+TextLabel.TextWrapped = false
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel.TextYAlignment = Enum.TextYAlignment.Center
+TextLabel.TextTransparency = 0
+TextLabel.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextStrokeTransparency = 1
+TextLabel.LineHeight = 1
+TextLabel.RichText = false
+TextLabel.TextTruncate = Enum.TextTruncate.None
+TextLabel.MaxVisibleGraphemes = -1
+TextLabel.Transparency = 0
+TextLabel.Rotation = 0
+TextLabel.Transparency = 0
+
 local TextBox = Instance.new("TextBox")
 TextBox.Name = "TextBox"
 TextBox.Parent = Frame
@@ -331,7 +331,7 @@ TextBox.Rotation = 0
 TextBox.AutomaticSize = Enum.AutomaticSize.None
 TextBox.Font = Enum.Font.Legacy
 TextBox.Text = "print(\"Hello\")"
-TextBox.TextColor3 = Color3.fromRGB(0, 255, 0)
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.TextSize = 8
 TextBox.TextScaled = false
 TextBox.TextWrapped = false
@@ -355,42 +355,42 @@ TextBox.Transparency = 0
 TextBox.Rotation = 0
 TextBox.Transparency = 0
 
-local RestarButton = Instance.new("TextButton")
-RestarButton.Name = "RestarButton"
-RestarButton.Parent = Frame
-RestarButton.Size = UDim2.new(0, 200, 0, 50)
-RestarButton.Position = UDim2.new(0, 30, 0, 90)
-RestarButton.AnchorPoint = Vector2.new(0, 0)
-RestarButton.Visible = false
-RestarButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-RestarButton.BackgroundTransparency = 0
-RestarButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
-RestarButton.BorderSizePixel = 1
-RestarButton.ClipsDescendants = false
-RestarButton.LayoutOrder = 0
-RestarButton.Selectable = true
-RestarButton.SelectionGroup = false
-RestarButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
-RestarButton.Rotation = 0
-RestarButton.AutomaticSize = Enum.AutomaticSize.None
-RestarButton.Font = Enum.Font.Legacy
-RestarButton.Text = "Restart Executor [ Beta ]"
-RestarButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-RestarButton.TextSize = 13
-RestarButton.TextScaled = false
-RestarButton.TextWrapped = false
-RestarButton.TextXAlignment = Enum.TextXAlignment.Center
-RestarButton.TextYAlignment = Enum.TextYAlignment.Center
-RestarButton.TextTransparency = 0
-RestarButton.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
-RestarButton.TextStrokeTransparency = 1
-RestarButton.LineHeight = 1
-RestarButton.RichText = false
-RestarButton.TextTruncate = Enum.TextTruncate.None
-RestarButton.MaxVisibleGraphemes = -1
-RestarButton.Transparency = 0
-RestarButton.Rotation = 0
-RestarButton.Transparency = 0
+local StatusLabel = Instance.new("TextLabel")
+StatusLabel.Name = "StatusLabel"
+StatusLabel.Parent = Frame
+StatusLabel.Size = UDim2.new(0, 200, 0, 50)
+StatusLabel.Position = UDim2.new(0, 30, 0, 200)
+StatusLabel.AnchorPoint = Vector2.new(0, 0)
+StatusLabel.Visible = false
+StatusLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+StatusLabel.BackgroundTransparency = 0
+StatusLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StatusLabel.BorderSizePixel = 1
+StatusLabel.ClipsDescendants = false
+StatusLabel.LayoutOrder = 0
+StatusLabel.Selectable = false
+StatusLabel.SelectionGroup = false
+StatusLabel.SizeConstraint = Enum.SizeConstraint.RelativeXY
+StatusLabel.Rotation = 0
+StatusLabel.AutomaticSize = Enum.AutomaticSize.None
+StatusLabel.Font = Enum.Font.Legacy
+StatusLabel.Text = "Status : 🟣 Undetected"
+StatusLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+StatusLabel.TextSize = 15
+StatusLabel.TextScaled = false
+StatusLabel.TextWrapped = false
+StatusLabel.TextXAlignment = Enum.TextXAlignment.Center
+StatusLabel.TextYAlignment = Enum.TextYAlignment.Center
+StatusLabel.TextTransparency = 0
+StatusLabel.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+StatusLabel.TextStrokeTransparency = 1
+StatusLabel.LineHeight = 1
+StatusLabel.RichText = false
+StatusLabel.TextTruncate = Enum.TextTruncate.None
+StatusLabel.MaxVisibleGraphemes = -1
+StatusLabel.Transparency = 0
+StatusLabel.Rotation = 0
+StatusLabel.Transparency = 0
 
 local SetingButton = Instance.new("TextButton")
 SetingButton.Name = "SetingButton"
@@ -448,8 +448,9 @@ end)
 --Restart Button 
 RestarButton.MouseButton1Click:Connect(function()
   ScreenGui:Destroy()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/akbarhub/MoonZHub/refs/heads/main/Executorv684"))();
-  end)
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/akbarhub/MoonZHub/refs/heads/main/Executorv684"))();
+end)
+
 --SetingButton
 SetingButton.MouseButton1Click:Connect(function()
   TextBox.Visible = false
@@ -476,7 +477,7 @@ SetingButton.MouseButton1Click:Connect(function()
   
 --TestButton
 TestButton.MouseButton1Click:Connect(function()
-  print("Executor Loaded")
+  game:GetService("StarterGui"):SetCore("DevConsoleVisible", true)
 end)
 
 --[[Anti Kick Funcition]]--
@@ -496,10 +497,59 @@ Anti = hookmetamethod(game, "__namecall", function(self, ...)
 end)
   
   
-  --Anti Kick 2
+  --Anti Ban 
+local X;
+X = hookmetamethod(game, "__namecall", function(self, ...)
+   if getnamecallmethod() == "Ban" then
+       local eval1 = {false}
+       local eval2 = {false}
+       local args = {...}
+       if debug.validlevel(3) and self.Parent == nil then
+           local stack = debug.getstack(3)
+           local counter = 0
+           local expected;
+           for i,v in pairs(stack) do
+               if v == game.Players.LocalPlayer.Name or v == "Ban" or v == "Packet" or v == "Network" then
+                   counter = counter + 1
+               elseif type(v) == "number" then
+                   if type(expected) == "number" then
+                       expected = expected + v
+                   else
+                       expected = v
+                   end
+               end
+           end
+           if counter == expected then
+               eval1 = {true, counter+5}
+           end
+       end
+       if eval1[1] then
+           if #args == eval1[2] then
+               local counter = 0
+               local outgoingkey;
+               for i,v in pairs(args) do
+                   if v == game.Players.LocalPlayer.Name or v == "Ban" or v == "Packet" or v == "Network" then
+                       counter = counter + 1
+                   elseif tostring(i) == "userdata: 0x000000001bdfb8ea" then --current outgoing key address, could change if roblox updates
+                       outgoingkey = v
+                   end
+                   if counter == eval1[2] then
+                       eval2 = {true, outgoingkey}
+                   end
+               end
+           end
+           if eval2[1] then
+               game:GetService("NetworkClient"):SetOutgoingKBPSLimit(0, outgoingkey) --stops ban packets (requires outgoing key to set it to 0)
+               game.Players.LocalPlayer:Kick("Game attempted to ban you but was blocked") --kicked because it'll detect the namecall being blocked
+               return wait(9e9)
+           end
+       end
+   end
+   return X(self, ...)
+end)
  
   
-  print("Status : 🟣 Undetectect")
+ 
   
   
  
@@ -510,6 +560,32 @@ ImageButton.MouseButton1Click:Connect(function()
 isMinimized = not isMinimized
 if isMinimized then
 Frame.Visible = true
+ExecuteButton.Visible = true
+ClearButton.Visible = true
+TextBox.Visible = true
+TextLabel.Visible = true
+BackButton.Visible = false
+TestButton.Visible = false
+SetingButton.Visible = true
+RestarButton.Visible = false
+StatusLabel.Visible = false
+frame.Size = UDim2.new(0, 500, 0, 35)
+minimizeButton.Text = "+"
+else
+Frame.Visible = false
+ExecuteButton.Visible = false
+ClearButton.Visible = false
+TextBox.Visible = false
+TextLabel.Visible = false
+BackButton.Visible = false
+TestButton.Visible = false
+SetingButton.Visible = false
+RestarButton.Visible = false
+StatusLabel.Visible = false
+frame.Size = UDim2.new(0, 500, 0, 350)
+minimizeButton.Text = "-"
+end
+end) Frame.Visible = true
 ExecuteButton.Visible = true
 ClearButton.Visible = true
 TextBox.Visible = true
